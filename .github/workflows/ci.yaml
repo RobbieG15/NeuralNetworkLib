@@ -13,10 +13,6 @@ jobs:
 
       - name: Build and test
         run: |
-          cd /usr/src/gtest
-          sudo cmake CMakeLists.txt
-          sudo make
-          sudo cp *.a /usr/lib
           mkdir build
           cd build
           cmake ..
