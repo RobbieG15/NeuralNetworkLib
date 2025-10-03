@@ -74,6 +74,15 @@ Vector Vector::cross(const Vector& other) const {
     return result;
 }
 
+Vector Vector::hadamard(const Vector& other) const {
+    if (size() != other.size()) throw std::runtime_error("Vector-Vector size mismatch");
+    Vector result = Vector(size());
+    for (size_t i = 0; i < size(); i++) {
+        result[i] = data_[i] * other[i];
+    }
+    return result;
+}
+
 // Norms and Distances
 double Vector::l2norm() const {
     return std::sqrt(dot(*this));

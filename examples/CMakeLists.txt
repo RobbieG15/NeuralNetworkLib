@@ -8,5 +8,8 @@ foreach(example_file ${EXAMPLES})
 
     add_executable(${example_name} ${CMAKE_CURRENT_SOURCE_DIR}/${example_file})
     target_link_libraries(${example_name} PRIVATE VectorLib PerceptronLib)
+    target_link_libraries(${example_name} PRIVATE VectorLib NeuralNetworkLib)
+    target_link_libraries(${example_name} PRIVATE VectorLib LayerLib)
+    target_link_libraries(${example_name} PRIVATE VectorLib MatrixLib)
     target_include_directories(${example_name} PRIVATE ${CMAKE_SOURCE_DIR}/include)
 endforeach()

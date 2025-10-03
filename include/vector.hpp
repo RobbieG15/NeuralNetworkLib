@@ -29,6 +29,7 @@ public:
     Vector operator/(double scalar) const;
     double dot(const Vector& other) const;
     Vector cross(const Vector& other) const;
+    Vector hadamard(const Vector& other) const;
 
     // Norms and Distances
     double l2norm() const;
